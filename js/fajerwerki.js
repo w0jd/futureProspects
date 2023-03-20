@@ -1,6 +1,6 @@
-<script>
+/* <script>
   
-  document.querySelector("input[type='submit']").addEventListener("click", function(event) {
+  document.querySelector("input[type='submit']").addEventListener("click", function(event)) {
     event.preventDefault();
 
     var name = document.querySelector("input[name='name']").value;
@@ -21,5 +21,21 @@
     }
 
     alert("Your message has been sent successfully! Thank you, " + name + ".");
-  });
-</script>
+  }; */
+  function shownav(){
+    let navBar = document.querySelector('#nav').classList;
+    let navBarList = document.querySelector('#list').classList;
+
+    if(navBar.contains('navigation-panel'))
+    {
+        navBar.remove('navigation-panel');
+        navBar.add('navigation-panel-hidden');
+        navBarList.add('hidden');
+        
+    }else {
+      navBar.remove('navigation-panel-hidden');
+      navBarList.remove('hidden');
+      navBar.add('navigation-panel');
+    }
+    
+  }
