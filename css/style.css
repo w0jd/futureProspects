@@ -41,7 +41,7 @@ body {
 .hidde{
  display: none !important;
 }
-.navigation-panel {
+#nav.show-navigation-panel {
   display: grid;
   grid-template-columns: 20% 60% 20%;
   grid-template-rows: repeat(10,10%);
@@ -52,10 +52,11 @@ body {
   grid-template-rows:10% 40% 50% ; */
   background-color: aliceblue ;
 }
-.navigation-panel-hidden{
+#nav{
     display: grid;
     grid-column:1/1 ;
     grid-row: 1/1;
+    transition: all .6s ease;
 }
 .show-nav{
   display: grid;
@@ -81,6 +82,7 @@ footer{
   padding: 0;
   grid-column: 2/3;
   display: grid;
+  transition: all .4s ease;
 
 
   justify-content: space-between;

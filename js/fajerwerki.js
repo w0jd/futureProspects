@@ -25,7 +25,7 @@
   function shownav(){
     let navBar = document.querySelector('#nav').classList;
     let navBarList = document.querySelector('#list').classList;
-
+    navBar.toggle('show-navigation-panel');
     if(navBar.contains('navigation-panel'))
     {
         navBar.remove('navigation-panel');
