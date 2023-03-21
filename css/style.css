@@ -8,6 +8,11 @@ body {
   grid-template-columns:0% 20% 60% 20%;
   grid-template-rows:0% 30% 60% 15% 5%;
 }
+.about-section{
+  display: grid;
+  grid-row: 2/3;
+  grid-column: 2/7;
+}
 .header-baner {
   display: grid;
   background-color: lightblue;
@@ -15,8 +20,23 @@ body {
   text-align: center;
   z-index: 2;
   grid-column: 1/5;
-  grid-row: 2/3;
-  grid-template-columns: 10% 90%;
+  grid-row: 1/2;
+  grid-template-columns: 5% 5% 90%;
+  grid-template-rows: 50% 40% 10%;
+}
+.services-section{
+  display: grid;
+  grid-row: 3/4;
+  grid-column: 2/7;
+}
+.contact-section{
+  display: grid;
+  grid-row: 4/6;
+  grid-column: 2/6;
+}
+.site-banner{
+  display: grid ;
+  grid-column: 1/4;
 }
 .hidde{
  display: none !important;
@@ -40,11 +60,14 @@ body {
 .show-nav{
   display: grid;
   grid-column: 1;
+  grid-row: 2/3;
 }
 main {
 display: grid;
-grid-row: 2/3;
+grid-row: 3/4;
 grid-column: 1/5;
+grid-template-columns: 5% 25% 25% 25% 15% 5%;
+grid-template-rows:1fr repeat(4,2fr) 1fr;
 }
 footer{
   display: grid;
@@ -56,6 +79,7 @@ footer{
   list-style: none;
   grid-row: 2/6;
   padding: 0;
+  grid-column: 2/3;
   display: grid;
 
 
@@ -65,15 +89,12 @@ footer{
 nav a {
   text-decoration: none;
   color: black;
-  padding: 10px 20px;
+  
   display: block;
 }
 
 
 
-section {
-  margin-bottom: 20px;
-}
 
 label {
   display: inline-block;
@@ -85,17 +106,16 @@ input[type="text"],
 input[type="email"],
 textarea {
   width: 100%;
-  padding: 10px;
-  font-size: 16px;
+
   box-sizing: border-box;
 }
 
 input[type="submit"] {
   width: 100%;
-  padding: 10px;
+ 
   background-color: lightgray;
   border: none;
-  font-size: 16px;
+  font-size: 1vw;
   font-weight: bold;
   cursor: pointer;
 }
@@ -107,7 +127,7 @@ input[type="submit"]:hover {
 
 footer {
   background-color: lightblue;
-  padding: 20px;
+ 
   text-align: center;
   color: white;
 }
