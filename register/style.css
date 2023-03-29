@@ -1,0 +1,110 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background-image: url("../Inne/name_background.jpg");
+}
+
+main {
+  padding: 30px;
+}
+
+footer {
+  background-color: lightblue;
+  text-align: center;
+  color: white;
+  position: absolute;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e8f5fd;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  display: block;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+label {
+  display: inline-block;
+  width: auto;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+label sup_label{  /*kolorowanie gwiazdek*/
+  color: red;
+}
+
+input[type="email"], input[type="text"], input[type="password"], input[type="phone"]{
+  padding: 10px;
+  border: 0.2vw solid #ccc;
+  border-radius: 10%;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+input[type="submit"] {
+  padding: 20px 20px;
+  background-color: lightblue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 320px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0062cc;
+}
+
+form{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+form sup_form{
+  margin-top: 20px;
+  display: default;
+}
+
+#form_register{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.data_error{  /*kolorowanie błędów*/
+  color: red;
+  font-size: 13px;
+}

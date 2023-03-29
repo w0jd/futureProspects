@@ -22,6 +22,7 @@
 
     alert("Your message has been sent successfully! Thank you, " + name + ".");
   }; */
+  
   function shownav(){
     let navBar = document.querySelector('#nav').classList;
     let navBarList = document.querySelector('#list').classList;
