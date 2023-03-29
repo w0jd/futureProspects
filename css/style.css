@@ -1,10 +1,20 @@
 body {
-  /* background-image: url("grafiki/tlo.jpg") */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
+button{
+  backdrop-filter: blur(100%);
 
+}
+button:hover{
+  box-shadow: 1em 1em 1em 0em rgba(186,183,113,0.75);
+}
+.theme{
+  background-image: url("../img/polsl.jpg");
+  backdrop-filter: blur(5px);
+  height: 100px;
+}
 header {
   background-color: lightblue; 
   padding: 20px;
@@ -36,7 +46,7 @@ section {
 
 label {
   display: inline-block;
-  width: 100px;
+  width: 200px;
   font-weight: bold;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -44,13 +54,21 @@ label {
   margin-right: 10px;
 }
 
-input[type="email"],input[type="text"],input[type="password"]{
+input[type="email"],input[type="text"],input[type="password"], input[type="phone"]{
+  padding: 10px;
+  border: 0.2vw solid #ccc;
+  border-radius: 10%;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+input[type="radio"]{
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-bottom: 10px;
-  width: 100%;
-  max-width: 300px;
+  max-width: 100px;
 }
 
 input[type="submit"] {
