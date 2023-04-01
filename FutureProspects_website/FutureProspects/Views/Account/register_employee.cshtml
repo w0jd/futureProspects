@@ -1,0 +1,73 @@
+  <main>
+            <section id="register">
+                <h2>Employee's profile</h2>
+                <form name="register_form" onsubmit="return validateform()">
+                    <h4>Common</h4>
+                    
+                    <label for="name">Name:  <sup_label>*</sup_label>  </label> 
+                    <input type="text" id="name" name="name">
+                    <div class="data_error"><div id="error_name"></div></div><br>
+                    
+                    <label for="surname">Surname:  <sup_label>*</sup_label>  </label>
+                    <input type="text" id="surname" name="surname" >
+                    <div class="data_error"><div id="error_surname"></div></div><br>
+
+                    <label for="email"> Email:  <sup_label>*</sup_label>  </label>
+                    <input type="email" id="email" name="email" >
+                    <div class="data_error"><div id="error_email"></div></div><br>
+                    
+                    <label for="password">Password:  <sup_label>*</sup_label>  </label>
+                    <input type="password" id="password" name="password" autocomplete="off">
+                    <div class="data_error"><div id="error_password"></div></div><br>
+
+                    <label for="phone number">Phone number:</label>
+                    <input type="number" id="phone_number" name="phone_number">
+                    <div class="data_error"><div id="error_phone_number"></div></div><br>
+                    
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city">
+                    <div class="data_error"><div id="error_city"></div></div><br>
+
+
+
+
+                    <br><br>
+                    <h4>Education</h4>
+
+                    <label for="major">Major:</label>
+                    <input type="text" id="major" name="major">
+                    <div class="data_error"><div id="error_major"></div></div><br>
+
+                    <label for="graduation year">Graduation year: (may be future)</label>
+                    <input type="text" id="graduation_year" name="graduation_year">
+                    <div class="data_error"><div id="error_graduation_year"></div></div><br>
+
+
+                    <sup_form>
+                        <label for="degree">Degree:</label><br>
+                        
+                        <input type="radio" id="degree_1" name="degree" value="I">
+                        <label for="degree_1">I - bachelor / engineer</label><br>
+                        <input type="radio" id="degree 2" name="degree">
+                        <label for="degree 2">II - master</label><br>
+                        <input type="radio" id="degree 2+" name="degree">
+                        <label for="degree 2+">II+ - doctor or higher</label><br>
+                        <br>
+                    </sup_form>
+
+
+                    <label for="university">University:</label>
+                    <input type="text" id="university" name="university">
+                    <div class="data_error"><div id="error_university"></div></div><br>
+
+                    <label for="faculty">Faculty:</label>
+                    <input type="text" id="faculty" name="faculty">
+                    <div class="data_error"><div id="error_faculty"></div></div><br>
+
+
+                    <br><br><br>
+                    <input type="submit" value="Register">
+                    <br><br>
+                </form>
+            </section>
+        </main>

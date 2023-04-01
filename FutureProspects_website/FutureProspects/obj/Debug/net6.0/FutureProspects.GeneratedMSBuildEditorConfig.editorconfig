@@ -16,8 +16,16 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Wojtek\Documents\GitHub\futureProspects\FutureProspects_website\FutureProspects
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Wojtek/Documents/GitHub/futureProspects/FutureProspects_website/FutureProspects/Views/Home/FutureProspectos.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGdXR1cmVQcm9zcGVjdG9zLmNzaHRtbA==
+[C:/Users/Wojtek/Documents/GitHub/futureProspects/FutureProspects_website/FutureProspects/Views/Account/registerEmployee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxyZWdpc3RlckVtcGxveWVlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Wojtek/Documents/GitHub/futureProspects/FutureProspects_website/FutureProspects/Views/Account/registerEmployer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxyZWdpc3RlckVtcGxveWVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Wojtek/Documents/GitHub/futureProspects/FutureProspects_website/FutureProspects/Views/Home/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Wojtek/Documents/GitHub/futureProspects/FutureProspects_website/FutureProspects/Views/Home/Index.cshtml]

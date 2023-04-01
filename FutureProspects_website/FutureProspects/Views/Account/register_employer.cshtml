@@ -1,0 +1,51 @@
+
+       <main>
+            <section id="register">
+            <h2>Employers profile</h2>
+                <form name="register_form" onsubmit="return validateform()">
+                    <h4>Common</h4>
+                    
+                    <label for="company name">Company name:  <sup_label>*</sup_label>  </label>
+                    <input type="text" id="company_name" name="company_name">
+                    <div class="data_error"><div id="error_company_name"></div></div><br>
+
+                    <label for="name">Name:  <sup_label>*</sup_label>  </label>
+                    <input type="text" id="name" name="name">
+                    <div class="data_error"><div id="error_name"></div></div><br>
+                    
+                    <label for="surname">Surname:  <sup_label>*</sup_label>  </label>
+                    <input type="text" id="surname" name="surname">
+                    <div class="data_error"><div id="error_surname"></div></div><br>
+
+                    <label for="email"> Email:  <sup_label>*</sup_label>  </label>
+                    <input type="email" id="email" name="email">
+                    <div class="data_error"><div id="error_email"></div></div><br>
+                    
+                    <label for="password">Password:  <sup_label>*</sup_label>  </label>
+                    <input type="password" id="password" name="password" autocomplete="off">
+                    <div class="data_error"><div id="error_password"></div></div><br>
+
+                    <label for="phone_number">Phone number:  <sup_label>*</sup_label>  </label>
+                    <input type="number" id="phone phone_number" name="phone_number">
+                    <div class="data_error"><div id="error_phone_number"></div></div><br>
+
+                    <label for="address">Address:  <span>*</span>  </label>
+                    <input type="text" id="address" name="address">
+                    <div class="data_error"><div id="error_address"></div></div><br>
+
+
+
+                    <br><br>
+                    <h4>Details</h4>
+
+                    <label for="company description">Company description:</label>
+                    <input type="text" id="company_description" name="company_description">
+                    <div class="data_error"><div id="error_company_description"></div></div><br>
+
+
+                    <br><br><br>
+                    <input type="submit" value="Register">
+                    <br><br>
+                </form>
+            </section>
+        </main>

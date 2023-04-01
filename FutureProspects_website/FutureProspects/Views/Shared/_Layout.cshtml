@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FutureProspects.styles.css" asp-append-version="true" />
 </head>
-<body>
-    <header>
+
+   @* <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">FutureProspects</a>
@@ -29,17 +29,35 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header>*@
+
+
+
+<body>
+
+  <header>
+    <h1>Welcome to Futurinio Prospectinio</h1>
+  </header>
+  
+  <nav>
+    <ul>
+            <li><a asp-area="" asp-controller="Home" asp-action="Index">Main Page</a></li>
+            <li><a asp-area="" asp-controller="Home" asp-action="Contact">About Us and Contact</a></li>
+            <li><a asp-area="" asp-controller="Account" asp-action="registerEmployee">Register Student</a></li>
+            <li><a asp-area="" asp-controller="Account" asp-action="registerEmployer">register Employer</a></li>
+      </ul>
+ 
+  </nav>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - FutureProspects - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
+
+
+    <footer>
+      <p>Copyright © Content Gang XD</p>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
