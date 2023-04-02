@@ -9,6 +9,7 @@
       "FutureProspects/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "7.0.4",
+          "Microsoft.EntityFrameworkCore.Design": "7.0.4",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.4",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.13",
           "Pomelo.EntityFrameworkCore.MySql": "7.0.0"
