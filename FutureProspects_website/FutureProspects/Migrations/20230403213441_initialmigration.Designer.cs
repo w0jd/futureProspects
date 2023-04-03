@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FutureProspects.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20230401183604_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20230403213441_initialmigration")]
+    partial class initialmigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,9 +62,10 @@ namespace FutureProspects.Migrations
                         .IsRequired()
                         .HasColumnType("longblob");
 
-                    b.Property<int>("Phone")
+                    b.Property<string>("Phone")
+                        .IsRequired()
                         .HasMaxLength(9)
-                        .HasColumnType("int");
+                        .HasColumnType("varchar(9)");
 
                     b.Property<DateTime?>("ResetTokenExpiers")
                         .HasColumnType("datetime(6)");

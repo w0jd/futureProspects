@@ -1,9 +1,14 @@
 
   
     <main class="theme">
-      <button>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, tempora?</button>
+  
+
+    <button asp-action="Login" asp-controller="Account">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, tempora?</button>
       <button>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum, laboriosam.</button>
     </main>
 
-  
-  <script src="../js/fajerwerki.js"></script>
+  @if (TempData["success"] != null)
+    {
+    <h2>@TempData["success"]</h2>
+    }
+<script src="../js/fajerwerki.js"></script>

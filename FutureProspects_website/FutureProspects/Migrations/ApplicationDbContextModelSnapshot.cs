@@ -59,9 +59,10 @@ namespace FutureProspects.Migrations
                         .IsRequired()
                         .HasColumnType("longblob");
 
-                    b.Property<int>("Phone")
+                    b.Property<string>("Phone")
+                        .IsRequired()
                         .HasMaxLength(9)
-                        .HasColumnType("int");
+                        .HasColumnType("varchar(9)");
 
                     b.Property<DateTime?>("ResetTokenExpiers")
                         .HasColumnType("datetime(6)");
