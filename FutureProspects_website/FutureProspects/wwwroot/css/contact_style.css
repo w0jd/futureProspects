@@ -1,14 +1,25 @@
 body {
-  /* background-image: url("grafiki/tlo.jpg") */
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: lightblue; 
   padding: 20px;
   text-align: center;
+  background-image: url("../Inne/name_background.jpg");
+}
+
+main {
+  padding: 30px;
+}
+
+footer {
+  background-color: lightblue;
+  text-align: center;
+  color: white;
+  position: absolute;
+  width: 100%;
 }
 
 nav ul {
@@ -17,6 +28,7 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: space-between;
+  background-color: #e8f5fd;
 }
 
 nav a {
@@ -26,17 +38,17 @@ nav a {
   display: block;
 }
 
-main {
-  padding: 20px;
-}
-
 section {
   margin-bottom: 20px;
 }
 
+
+
+
+
 label {
   display: inline-block;
-  width: 100px;
+  width: 200px;
   font-weight: bold;
   margin-bottom: 5px;
   margin-top: 5px;
@@ -44,10 +56,10 @@ label {
   margin-right: 10px;
 }
 
-input[type="email"],input[type="text"],input[type="password"]{
+input[type="email"], input[type="text"], input[type="password"], input[type="phone"]{
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 0.2vw solid #ccc;
+  border-radius: 10%;
   margin-bottom: 10px;
   width: 100%;
   max-width: 300px;
@@ -70,12 +82,6 @@ input[type="submit"]:hover {
   background-color: #0062cc;
 }
 
-footer {
-  background-color: lightblue;
-  padding: 20px;
-  text-align: center;
-  color: white;
-}
 form{
   display: flex;
   flex-direction: column;

@@ -50,7 +50,7 @@ namespace FutureProspects.Controllers
             };
             _context.Employees.Add(user);
             _context.SaveChangesAsync();
-            return RedirectToAction("Index","Account");
+            return RedirectToAction("Index", "Account");
         }
 
         private void CreatePasswordHash(string password,
@@ -71,20 +71,18 @@ namespace FutureProspects.Controllers
         [HttpPost("Login")]
         public IActionResult Login(UserLoginRequest request)// w ajkiś sposób utworzenie w tym momęcie obiektu dopisuje do niego pasujące dane z formularza
         {
-            if(_context.Employees.Any(u => u.Name == request.email)){
-               Console.WriteLine(_context.Employees.FirstOrDefaultAsync(u => u.Email == request.email));
-            }
             var user =_context.Employees.First(u=>u.Email == request.email);
             if (user == null)
             {
-                return BadRequest("User not found");
+                TempData["success"] = "user not found";
+                return RedirectToAction("Index", "Home");
             }
         /*    if (user.VerifiedAt == null)
             {
                 return BadRequest("not verified");
             }*/
             if (!VerifyPasswordHash(request.password, user.PasswordHash,user.PasswordSalt)) {
-                return BadRequest("wrong password");
+                TempData["success"]="wrong password";
             }
             TempData["success"] = $"logged as {user.Email}";
             return RedirectToAction("Index", "Home");

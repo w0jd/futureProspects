@@ -1,0 +1,85 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  padding: 20px;
+  text-align: center;
+  background-image: url("../Inne/name_background.jpg");
+}
+
+main {
+  padding: 30px;
+  min-height: 1378px;
+  background-image: url("../Inne/polsl.jpg");
+  backdrop-filter: blur(5px);
+  background-size:contain;
+  background-repeat: no-repeat;
+}
+
+footer {
+  background-color: lightblue;
+  text-align: center;
+  color: white;
+  position: absolute;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e8f5fd;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  display: block;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+.theme{
+}
+
+#blank{
+  min-height: 900px;
+}
+
+.greeting{
+  color:aliceblue;
+  font-size: 136px;
+  font-weight: 700;
+  margin-left: 15px;
+}
+
+.button{
+  backdrop-filter: blur(100%);
+  background-color: whitesmoke;
+  color: black;
+  border: 3px solid #10a5ca;
+  border-radius: 6px;
+  transition-duration: 0.4s;
+  font-size: 44px;
+  padding: 10px 18px;
+  margin-top: 20px;
+  margin-left: 30px;
+}
+
+.button:hover{
+  /*box-shadow: 1em 1em 1em 0em rgba(186,183,113,0.75);*/
+  background-color: #10a5ca;
+  color: white;
+}
