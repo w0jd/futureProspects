@@ -24,19 +24,27 @@
   }; */
   
   function shownav(){
+    console.log("aaaaaaaaaaaaaa");
     let navBar = document.querySelector('#nav').classList;
-    let navBarList = document.querySelector('#list').classList;
-    navBar.toggle('show-navigation-panel');
-    if(navBar.contains('navigation-panel'))
+    console.log(navBar)
+    // let navBarList = document.querySelector('#list').classList;
+    let navBarList = document.querySelector('#ton').classList;
+
+    // navBar.toggle('show-navigation-panel');
+    if(navBar.contains('navigation'))
     {
-        navBar.remove('navigation-panel');
-        navBar.add('navigation-panel-hidden');
-        navBarList.add('hidden');
+        navBar.remove('navigation');
+        navBar.add('navigation-hidden');
+        navBarList.add('control-hidden');
+        navBarList.remove('control');
+
         
     }else {
-      navBar.remove('navigation-panel-hidden');
-      navBarList.remove('hidden');
-      navBar.add('navigation-panel');
+      navBar.add('navigation');
+      
+      navBar.remove('navigation-hidden');
+      navBarList.remove('control-hidden');
+      navBarList.add('control');
     }
     
   }

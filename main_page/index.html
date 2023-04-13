@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Futuros Prospectorinios</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="/Inne/fajerwerki.js" async await></script>
   </head>
 
 
@@ -11,31 +12,34 @@
   <body>
     <header>
       <h1>Welcome to Futurinio Prospectinio</h1>
+      
     </header>
 
-    <nav>
-      <ul>
-        <li><a href="../main_page/index.html">Main Page</a></li>
-        <li><a href="../about_contact/about_contact.html">About Us and Contact</a></li>
-        <li><a href="../register/register_employee.html">Register Student</a></li>
-        <li><a href="../register/register_employer.html">Register Employer</a></li>
-      </ul>
-    </nav>
+  
 
 
 
     <main class="theme">
-      <div id="blank"></div>
-      <div class="greeting">
-        <span>Welcome to</span> <br>
+      <nav class="navigation" id="nav">
+        <ul class="menu">
+          <li class="element"><a href="../main_page/index.html">Main Page</a></li>
+          <li class="element"><a href="../about_contact/about_contact.html">About Us and Contact</a></li>
+          <li class="element"><a href="../register/register_employee.html">Register Student</a></li>
+          <li class="element"><a href="../register/register_employer.html">Register Employer</a></li>
+        </ul>
+      </nav>
+      <button class="control" onclick="shownav()" id="ton">lorem</button>
+      <section class="greeting">
+        <span>Welcome to</span> 
         <span>Future Prospects.</span>
-      </div>
-      <a href="../register/register_employee.html">
-        <button class="button">Register as Student</button>
-      </a>
-      <a href="../register/register_employer.html">
-        <button class="button">Register as Employer</button>
-      </a>
+        <a href="../register/register_employee.html">
+          <button class="button">Register as Student</button>
+        </a>
+        <a href="../register/register_employer.html">
+          <button class="button">Register as Employer</button>
+        </a>
+      </section>
+
     </main>
 
 
