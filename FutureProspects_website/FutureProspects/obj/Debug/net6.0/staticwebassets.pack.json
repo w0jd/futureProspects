@@ -5,12 +5,12 @@
       "PackagePath": "staticwebassets\\FutureProspects.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\contact_style.css",
+      "PackagePath": "staticwebassets\\css\\contact_style.css"
     },
     {
-      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\style.css",
-      "PackagePath": "staticwebassets\\css\\style.css"
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\main_style.css",
+      "PackagePath": "staticwebassets\\css\\main_style.css"
     },
     {
       "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\style_registster.css",

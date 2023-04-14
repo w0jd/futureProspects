@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Lgv7pusv9+81rhf2V+S6mwO0DBe5fZmNPFZdGhK3iag=",
+  "Hash": "BPGx+GyMHMUG7afIjlGKu0XicZzD1Cu4uRtNIIBAEj8=",
   "Source": "FutureProspects",
   "BasePath": "_content/FutureProspects",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\FutureProspects.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\contact_style.css",
       "SourceId": "FutureProspects",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\",
       "BasePath": "_content/FutureProspects",
-      "RelativePath": "css/site.css",
+      "RelativePath": "css/contact_style.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,15 +65,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\site.css"
+      "OriginalItemSpec": "wwwroot\\css\\contact_style.css"
     },
     {
-      "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\style.css",
+      "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\main_style.css",
       "SourceId": "FutureProspects",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\",
       "BasePath": "_content/FutureProspects",
-      "RelativePath": "css/style.css",
+      "RelativePath": "css/main_style.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -82,7 +82,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\style.css"
+      "OriginalItemSpec": "wwwroot\\css\\main_style.css"
     },
     {
       "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\style_registster.css",

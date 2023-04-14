@@ -13,10 +13,10 @@ namespace FutureProspects.Controllers
         {
             return View();
         }
-        public IActionResult Login()
+/*        public IActionResult Login()
         {
             return View();
-        }
+        }*/
         public IActionResult Index()
         {
             return View();
@@ -69,7 +69,22 @@ namespace FutureProspects.Controllers
             return Convert.ToHexString(RandomNumberGenerator.GetBytes(64));
         }
         [HttpPost("Login")]
-        public IActionResult Login(UserLoginRequest request)// w ajkiś sposób utworzenie w tym momęcie obiektu dopisuje do niego pasujące dane z formularza
+        private async Task SignInUser(string username)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim(ClaimTypes.Name, username),//tworzy coś w rodzaju obiektu o tuch wartościach
+                /**///new Claim("MyCustomClaim", "my claim value")
+            };
+
+            var claimsIdentity = new ClaimsIdentity(
+                claims, CookieAuthenticationDefaults.AuthenticationScheme);//tworzy obiekt reprezentujący tożsamość uzytkownika składjący się z jego nazwy i typu uwierzytenienia 
+
+            await HttpContext.SignInAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(claimsIdentity));// zapisuje informacje o użytkownkiu w pliku cookie  claimsPrincipal reprezentuje identyfkacje i autoryzację użytkownika 
+        }
+        public async Task <IActionResult> Login(UserLoginRequest request)// w ajkiś sposób utworzenie w tym momęcie obiektu dopisuje do niego pasujące dane z formularza
         {
             var user =_context.Employees.First(u=>u.Email == request.email);
             if (user == null)
@@ -83,10 +98,16 @@ namespace FutureProspects.Controllers
             }*/
             if (!VerifyPasswordHash(request.password, user.PasswordHash,user.PasswordSalt)) {
                 TempData["success"]="wrong password";
+                return RedirectToAction("Index", "Home");
+
             }
+            await SignInUser(user.Email);
+            var username = HttpContext.User.Identity.Name;
+            var u = username;
             TempData["success"] = $"logged as {user.Email}";
             return RedirectToAction("Index", "Home");
         }
+
         private bool VerifyPasswordHash(string password,
                                         byte[] passwordHash,
                                        byte[] passwordSalt)

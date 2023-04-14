@@ -1,18 +1,26 @@
+@using Microsoft.AspNetCore.Http
 
-  
+@inject IHttpContextAccessor HttpContextAccessor 
+@*umożliwa dostęp do danych z modelu i kontrolera*@
     <main class="theme">
     <div id="blank"></div>
     <div class="greeting">
-        <span>Welcome to</span> <br>
+        <span>Welcome to</span>
         <span>Future Prospects.</span>
     </div>
 
-    <button asp-action="Login" asp-controller="Account">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta, tempora?</button>
+    <button asp-action="Index" asp-controller="Account">Login</button>
       <button>Register as a eploye</button>
     </main>
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Logged in as: @HttpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Name).Value</p>
+}
+
 
   @if (TempData["success"] != null)
     {
     <h2>@TempData["success"]</h2>
+    
     }
 <script src="../js/fajerwerki.js"></script>
