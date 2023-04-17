@@ -3,6 +3,7 @@ using System;
 using FutureProspects.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FutureProspects.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230417205650_EployeAndOffer")]
+    partial class EployeAndOffer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -149,7 +152,7 @@ namespace FutureProspects.Migrations
 
                     b.HasIndex("EmpolyerId");
 
-                    b.ToTable("Offers");
+                    b.ToTable("Offer");
                 });
 
             modelBuilder.Entity("FutureProspects.Models.Offer", b =>

@@ -4,6 +4,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddHttpContextAccessor();
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+/*builder.Services.AddRazorPages().AddRazorRuntimeCompilation();*/
+
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));

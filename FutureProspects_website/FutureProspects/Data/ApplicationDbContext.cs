@@ -11,5 +11,8 @@ namespace FutureProspects.Data
         }
 
         public DbSet<Employee> Employees { get; set; }
+        public DbSet<Empolyer> Empolyers { get; set; }
+        public DbSet<Offer> Offers{ get; set; }
+
     }
 }
