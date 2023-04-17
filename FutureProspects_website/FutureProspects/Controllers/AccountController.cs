@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Security.Claims;
 using System.Security.Cryptography;
-
 namespace FutureProspects.Controllers
 {
     public class AccountController : Controller
@@ -13,14 +14,16 @@ namespace FutureProspects.Controllers
         {
             return View();
         }
-/*        public IActionResult Login()
-        {
-            return View();
-        }*/
-        public IActionResult Index()
-        {
-            return View();
-        }
+        [HttpGet]
+              public IActionResult Index()
+               {
+                   HttpContext.SignOutAsync();
+                   return RedirectToAction("Index","Home");
+               }
+               /*       public IActionResult Index()
+                      {
+                          return View();
+                      }*/
 
         private readonly ApplicationDbContext _context;
         public AccountController(ApplicationDbContext context)
@@ -83,6 +86,7 @@ namespace FutureProspects.Controllers
             await HttpContext.SignInAsync(
                 CookieAuthenticationDefaults.AuthenticationScheme,
                 new ClaimsPrincipal(claimsIdentity));// zapisuje informacje o użytkownkiu w pliku cookie  claimsPrincipal reprezentuje identyfkacje i autoryzację użytkownika 
+            
         }
         public async Task <IActionResult> Login(UserLoginRequest request)// w ajkiś sposób utworzenie w tym momęcie obiektu dopisuje do niego pasujące dane z formularza
         {
@@ -118,5 +122,13 @@ namespace FutureProspects.Controllers
                 return computedHash.SequenceEqual(passwordHash);
             }
         }
+/*        public async Task Index< IActionResult>()
+        {
+          
+
+            await HttpContext.SignOutAsync();
+            View();
+        }*/
     }
+
 }

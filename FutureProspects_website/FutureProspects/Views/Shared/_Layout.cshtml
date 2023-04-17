@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -8,7 +10,6 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FutureProspects.styles.css" asp-append-version="true" />
 </head>
-
    @* <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
@@ -36,24 +37,31 @@
 <body>
 
   <header>
-    <h1>Welcome to Futurinio Prospectinio</h1>
-  </header>
+   
+
   
   <nav>
     <ul>
+          <li><div id="logo">Future Prospects</div></li>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li><a class="text-white">Welcone in as: @HttpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Name).Value</a></li>
+                    <li><a asp-controller="Account" asp-action="">Logout </a></li>
+                }
+
             <li><a asp-area="" asp-controller="Home" asp-action="Index">Main Page</a></li>
             <li><a asp-area="" asp-controller="Home" asp-action="Contact">About Us and Contact</a></li>
             <li><a asp-area="" asp-controller="Account" asp-action="registerEmployee">Register Student</a></li>
             <li><a asp-area="" asp-controller="Account" asp-action="registerEmployer">register Employer</a></li>
-            <li><a asp-controller="Account" asp-action="Index">Login</a></li>
+            
       </ul>
  
   </nav>
-    <div class="container">
-        <main role="main" class="pb-3">
+ </header>
+        <main role="main" class="pb-3" class="theme">
             @RenderBody()
         </main>
-    </div>
+
 
 
 
