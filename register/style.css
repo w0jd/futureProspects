@@ -1,13 +1,37 @@
+@font-face {
+  font-family: 'Charlie-display-SB';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Charlie_Display-Semibold.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Charlie-text-R';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Charlie_Text-Regular.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Charlie-text-SB';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Charlie_Text-Semibold.woff2") format('woff2');
+}
+
 body {
   font-family: Arial, sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../Inne/polsl.jpg");
+  backdrop-filter: blur(15px);
+  background-repeat: no-repeat;
+  background-size: 250vh;
   margin: 0;
   padding: 0;
 }
 
 header {
-  padding: 20px;
-  text-align: center;
-  background-image: url("../Inne/name_background.jpg");
+  padding: 0 10px 0;
+  background-color: #384661;
 }
 
 main {
@@ -15,20 +39,60 @@ main {
 }
 
 footer {
-  background-color: lightblue;
+  background-color: #172a42;
   text-align: center;
   color: white;
   position: absolute;
   width: 100%;
 }
 
-nav ul {
+/* nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: space-between;
   background-color: #e8f5fd;
+} */
+
+ul {
+  list-style-type: none;
+  display:flex;
+  justify-content:center;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #384661;
+}
+
+li {
+  display: table-row;
+  flex-grow:3;
+  text-align:center;
+  margin:4px;
+}
+
+li a {
+  font-family: 'Charlie-text-SB', sans-serif;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #172a42;
+}
+
+#logo{
+  display: block;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
 }
 
 nav a {
@@ -62,7 +126,7 @@ label sup_label{  /*kolorowanie gwiazdek*/
 
 input[type="email"], input[type="text"], input[type="password"], input[type="phone"]{
   padding: 10px;
-  border: 0.2vw solid #ccc;
+  border: 0.2vw solid #a9a9a9;
   border-radius: 10%;
   margin-bottom: 10px;
   width: 100%;
@@ -72,7 +136,7 @@ input[type="email"], input[type="text"], input[type="password"], input[type="pho
 input[type="submit"] {
   padding: 20px 20px;
   background-color: lightblue;
-  color: #fff;
+  color: #000000;
   border: none;
   border-radius: 5px;
   margin-top: 10px;
@@ -91,6 +155,9 @@ form{
   display: flex;
   flex-direction: column;
   align-items: left;
+  background-color: #ccc;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 form sup_form{

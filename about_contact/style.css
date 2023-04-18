@@ -1,5 +1,9 @@
 body {
   font-family: Arial, sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../Inne/polsl.jpg");
+  backdrop-filter: blur(15px);
+  background-repeat: no-repeat;
+  background-size: 250vh;
   margin: 0;
   padding: 0;
 }
@@ -10,12 +14,42 @@ header {
   background-image: url("../Inne/name_background.jpg");
 }
 
+@font-face {
+  font-family: 'Charlie-display-SB';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Charlie_Display-Semibold.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Charlie-text-R';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Charlie_Text-Regular.woff2") format('woff2');
+}
+
+@font-face {
+  font-family: 'Charlie-text-SB';
+  font-weight: 400;
+  font-style: normal;
+  src: url("../fonts/Charlie_Text-Semibold.woff2") format('woff2');
+}
+
+#logo{
+  display: block;
+  color: white;
+  font-size: 26px;
+  text-align: center;
+  padding: 8px;
+  text-decoration: none;
+}
+
 main {
   padding: 30px;
 }
 
 footer {
-  background-color: lightblue;
+  background-color: #172a42;
   text-align: center;
   color: white;
   position: absolute;
@@ -38,8 +72,42 @@ nav a {
   display: block;
 }
 
+ul {
+  list-style-type: none;
+  display:flex;
+  justify-content:center;
+  width:100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #384661;
+}
+
+li {
+  display: table-row;
+  flex-grow:3;
+  text-align:center;
+  margin:4px;
+}
+
+li a {
+  font-family: 'Charlie-text-SB', sans-serif;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #172a42;
+}
+
 section {
   margin-bottom: 20px;
+  background-color: #ccc;
+  padding: 15px;
+  border-radius: 15px;
 }
 
 
@@ -68,7 +136,7 @@ input[type="email"], input[type="text"], input[type="password"], input[type="pho
 input[type="submit"] {
   padding: 20px 20px;
   background-color: lightblue;
-  color: #fff;
+  color: #000000;
   border: none;
   border-radius: 5px;
   margin-top: 10px;
