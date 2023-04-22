@@ -2,7 +2,7 @@
 <html lang="pl">
     <head>
         <meta charset="UTF-8">
-        <title>Register now</title>
+        <title>Register</title>
         <link rel="stylesheet" type="text/css" href="style.css">
         <script type="text/javascript" src="validation_employer.js"></script>
     </head>
@@ -10,18 +10,6 @@
 
 
     <body>
-        <!-- <header>
-            <h1>Welcome to Futurinio Prospectinio</h1>
-        </header>
-
-        <nav>
-            <ul>
-            <li><a href="../main_page/index.html">Main Page</a></li>
-            <li><a href="../about_contact/about_contact.html">About Us and Contact</a></li>
-            <li><a href="../register/register_employee.html">Register Student</a></li>
-            <li><a href="../register/register_employer.html">Register Employer</a></li>
-            </ul>
-        </nav> -->
         <ul>
             <li><div id="logo">Future Prospects</div></li>
             <li><a href="../main_page/index.html">Main Page</a></li>
@@ -33,10 +21,12 @@
 
 
         <main>
-            <section id="register">
-            <h2>Employers profile</h2>
+            <section id="header">
+                <div>Register - Employers profile</div>
+            </section>
+            <section id="common">
+                <div class="headline">Common</div>
                 <form name="register_form" onsubmit="return validateform()">
-                    <h4>Common</h4>
                     
                     <label for="company name">Company name:  <sup_label>*</sup_label>  </label>
                     <input type="text" id="company_name" name="company_name">
@@ -65,11 +55,12 @@
                     <label for="address">Address:  <sup_label>*</sup_label>  </label>
                     <input type="text" id="address" name="address">
                     <div class="data_error"><div id="error_address"></div></div><br>
+                </form>
 
+                <br><br><br>
+                <div class="headline">Details</div>
 
-
-                    <br><br>
-                    <h4>Details</h4>
+                <form name="register_form" onsubmit="return validateform()">
 
                     <label for="company description">Company description:</label>
                     <input type="text" id="company_description" name="company_description">
@@ -84,7 +75,7 @@
         </main>
 
         <footer>
-            <p>Copyright © Content Gang XD</p>
+            <p>Copyright © Content Gang</p>
         </footer>
 
     </body>
