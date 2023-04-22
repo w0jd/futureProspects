@@ -2,19 +2,19 @@
 <main>
     <section id="register">
         <h2>Employers profile</h2>
-        <form name="register_form" onsubmit="return validateform()">
+        <form name="RegisterEmpolyer" onsubmit="return validateform()" asp-action="RegisterEmpolyer" method="post">
             <h4>Common</h4>
 
-            <label for="company name">Company name:  <sup_label>*</sup_label>  </label>
-            <input type="text" id="company_name" name="company_name">
+            <label for="CompanyName ">Company name:  <sup_label>*</sup_label>  </label>
+            <input type="text" id="company_name" name="CompanyName">
             <div class="data_error"><div id="error_company_name"></div></div><br>
 
-            <label for="name">Name:  <sup_label>*</sup_label>  </label>
-            <input type="text" id="name" name="name">
+            <label for="Name">Name:  <sup_label>*</sup_label>  </label>
+            <input type="text" id="name" name="Name">
             <div class="data_error"><div id="error_name"></div></div><br>
 
-            <label for="surname">Surname:  <sup_label>*</sup_label>  </label>
-            <input type="text" id="surname" name="surname">
+            <label for="Surname">Surname:  <sup_label>*</sup_label>  </label>
+            <input type="text" id="surname" name="Surname">
             <div class="data_error"><div id="error_surname"></div></div><br>
 
             <label for="email"> Email:  <sup_label>*</sup_label>  </label>
@@ -24,22 +24,26 @@
             <label for="password">Password:  <sup_label>*</sup_label>  </label>
             <input type="password" id="password" name="password" autocomplete="off">
             <div class="data_error"><div id="error_password"></div></div><br>
-
-            <label for="phone_number">Phone number:  <sup_label>*</sup_label>  </label>
-            <input type="number" id="phone phone_number" name="phone_number">
+            <label for="ConfirmPassword">ConfirmPassword:  <sup_label>*</sup_label>  </label>
+            <input type="password" id="password" name="ConfirmPassword" autocomplete="off">
+            <div class="data_error"><div id="error_ConfirmPassword"></div></div>
+            <label for="Phone">Phone number:  <sup_label>*</sup_label>  </label>
+            <input type="number" id="phone phone_number" name="Phone">
             <div class="data_error"><div id="error_phone_number"></div></div><br>
 
-            <label for="address">Address:  <span>*</span>  </label>
-            <input type="text" id="address" name="address">
+            <label for="City">Address:  <span>*</span>  </label>
+            <input type="text" id="address" name="City">
+
             <div class="data_error"><div id="error_address"></div></div><br>
+            <label for="Adress">Address:  <span>*</span>  </label>
+            <input type="text" id="address" name="Adress" />
 
 
-
-            <br><br>
+       
             <h4>Details</h4>
 
-            <label for="company description">Company description:</label>
-            <input type="text" id="company_description" name="company_description">
+            <label for="CompadnyDescription">Company description:</label>
+            <input type="text" id="company_description" name="CompadnyDescription">
             <div class="data_error"><div id="error_company_description"></div></div><br>
 
 

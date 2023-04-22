@@ -122,13 +122,36 @@ namespace FutureProspects.Controllers
                 return computedHash.SequenceEqual(passwordHash);
             }
         }
-/*        public async Task Index< IActionResult>()
-        {
-          
+        /*        public async Task Index< IActionResult>()
+                {
 
-            await HttpContext.SignOutAsync();
-            View();
-        }*/
+
+                    await HttpContext.SignOutAsync();
+                    View();
+                }*/
+        [HttpPost("RegisterEmpolyer")]
+        public IActionResult RegisterEmpolyer(EmpolyerRegiserRequset request)// w ajkiś sposób utworzenie w tym momęcie obiektu dopisuje do niego pasujące dane z formularza
+        {
+            CreatePasswordHash(request.password, out byte[] passwordHash, out byte[] passwordSalt);
+            var empoler = new Empolyer
+            {
+                Name = request.Name,
+                CompanyName=request.CompanyName,
+                Surname = request.Surname,
+                City = request.City,
+                CompadnyDescription=request.CompadnyDescription,
+                Phone = request.Phone,
+                Email = request.Email,
+                PasswordHash = passwordHash,
+                PasswordSalt = passwordSalt,
+                Adress=request.Adress
+               /* VerificationToken = CreateRandomToken()*/
+            };
+
+            _context.Empolyers.Add(empoler);
+            _context.SaveChangesAsync();
+            return RedirectToAction("Index", "Account");
+        }
     }
 
 }
