@@ -1,5 +1,9 @@
 ﻿@inject IHttpContextAccessor HttpContextAccessor
+@inject IUrlHelper Url
 
+@{
+    string currentUrl = Context.Request.Path.ToString();
+}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,8 +46,15 @@
 
   
   <nav>
-    <ul>
-          <li><div id="logo">Future Prospects</div></li>
+    <ul id="bar">
+                @if (currentUrl != "/Offer")
+                {
+                    <li><div id="logo">Future Prospects</div></li>
+                }
+                else{
+                  <li><input type="text" id="searchBox" placeholder="Search"></li>
+                
+                }
                 @if (User.Identity.IsAuthenticated)
                 {
                     <li><a class="text-white">Welcone in as: @HttpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Name).Value</a></li>

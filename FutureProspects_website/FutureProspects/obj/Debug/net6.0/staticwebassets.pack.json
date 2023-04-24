@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\css\\main_style.css"
     },
     {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\offer_list_style.css",
+      "PackagePath": "staticwebassets\\css\\offer_list_style.css"
+    },
+    {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\offer_style.css",
+      "PackagePath": "staticwebassets\\css\\offer_style.css"
+    },
+    {
       "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -35,6 +43,34 @@
     {
       "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\fonts\\Charlie_Text-Semibold.woff2",
       "PackagePath": "staticwebassets\\fonts\\Charlie_Text-Semibold.woff2"
+    },
+    {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\icons\\clock.png",
+      "PackagePath": "staticwebassets\\icons\\clock.png"
+    },
+    {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\icons\\contract.png",
+      "PackagePath": "staticwebassets\\icons\\contract.png"
+    },
+    {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\icons\\heart.png",
+      "PackagePath": "staticwebassets\\icons\\heart.png"
+    },
+    {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\icons\\knowledge.png",
+      "PackagePath": "staticwebassets\\icons\\knowledge.png"
+    },
+    {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\icons\\location.png",
+      "PackagePath": "staticwebassets\\icons\\location.png"
+    },
+    {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\icons\\printer.png",
+      "PackagePath": "staticwebassets\\icons\\printer.png"
+    },
+    {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\icons\\share.png",
+      "PackagePath": "staticwebassets\\icons\\share.png"
     },
     {
       "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\js\\fajerwerki.js",
@@ -285,8 +321,8 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\name_background.jpg",
-      "PackagePath": "staticwebassets\\media\\name_background.jpg"
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\logo_polsl.png",
+      "PackagePath": "staticwebassets\\media\\logo_polsl.png"
     },
     {
       "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\polsl.jpg",

@@ -1,16 +1,19 @@
 ﻿
 @*umożliwa dostęp do danych z modelu i kontrolera*@
-@inject IHttpContextAccessor HttpContextAccessor
+@inject IHttpContextAccessor HttpContextAccessor;
 <head>
     <link rel="stylesheet" type="text/css" href="~/css/main_style.css">
 </head>
 
 
-    <div id="blank"></div>
-    <div class="greeting">
-        <span>Welcome to</span> <br>
-        <span>Future Prospects.</span>
-    </div>
+    <div font-changing class="greeting">
+        <span>
+          <div id="blank1"></div>
+          Welcome to <br> 
+          Future Prospects
+        </span>
+      </div>
+
 
     <div class="call">
         <button class="button" data-popup-target="#popup">Start now!</button>

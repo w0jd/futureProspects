@@ -37,3 +37,18 @@ function closePopup(popup) {
     overlay.classList.remove('active')
     body.classList.remove('stop-scrolling')
 }
+
+
+
+
+
+const font_changing = document.querySelector('[font-changing]')
+// const blank_changing = document.querySelector('[blank-changing]')
+
+window.addEventListener('scroll', () => {
+    const current = window.scrollY;
+    font_changing.style.fontSize = `clamp(5vh, ${current*0.3}px, 12vh)`;
+    font_changing.style.transition = '100ms ease';
+    
+    // blank_changing.style.height = `clamp(5vh, ${current}vh, 50vh)`;
+})

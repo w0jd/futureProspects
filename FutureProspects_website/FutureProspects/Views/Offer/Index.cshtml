@@ -1,33 +1,48 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
+@inject IHttpContextAccessor HttpContextAccessor
 @model IEnumerable<Empolyer>
 
-<table>
-    <thead>
-        <th>
-            Name of company
-        </th>
-        <th>
-            e-mail
-        </th>
-        <th>
-            phone
-        </th>
-        <th>Offer title </th>
-        <th>OFFER desciption </th>
-        <th>skill issue?</th>
-        <th>Money monaye money</th>
-    </thead>
-    <tbody>
 
-    @foreach (var obj in Model)
-    {
+  <head>
+    <meta charset="UTF-8">
+    <title>Future Prospects</title>
+    <link rel="stylesheet" type="text/css" href="~/css/offer_list_style.css">
+  </head>
+
+    <div class="container">
+      <div class="filters">
+        <h2>Filters</h2>
+        <p>City</p>
+        <form>
+          <input type="checkbox" id="City1" name="City1" value="Katowice">
+          <label for="Katowice">Katowice</label><br>
+          <input type="checkbox" id="City2" name="City2" value="Gliwice">
+          <label for="Gliwice">Gliwice</label><br>
+          <input type="checkbox" id="City3" name="City3" value="Ruda Śląska">
+          <label for="Ruda Śląska">Ruda Śląska</label><br>
+        </form>
+        <p>Type</p>
+        <input type="checkbox" id="Type1" name="Type1" value="Internship">
+          <label for="Internship">Internship</label><br>
+          <input type="checkbox" id="Type2" name="Type2" value="EmploymentContract">
+          <label for="EmploymentContract">Employment contract</label><br>
+          <input type="checkbox" id="Type3" name="Type3" value="ContractForWork">
+          <label for="ContractForWork">Contract for work</label><br>
+    </div>
+
+    <main class="offerContainer">
+        <div class="jobOffers">
+      
+        @foreach (var obj in Model)
+        {
+
  
             @foreach (var offer in obj.Offer)
             {
                 
-                <tr>
+             @*     <tr>
                     <td> @obj.CompanyName</td>
                     <td>@obj.Email</td>
                     <td> @obj.Phone</td>
@@ -36,14 +51,34 @@
                     <td>@offer.OfferDescription</td>
                     <td>@offer.SkllsRequred</td>
                     <td>@offer.Salary</td>
-                    
-                </tr>
+                    <td>@obj.Offer</td>
+                </tr>*@
+                    <a style="none" asp-controller="Offer" asp-action="jobOffer" asp-route-id="@offer.Id">
+                    <div class="jobOffer">
+                        <form >
+                  <div class="jobOfferImg">
+                  <img src="../media/logo_polsl.png"alt="logo">
+                </div>
+                <div class="content">
+                    <p class="none"> @offer.Id</p> 
+                        <h4>>@offer.OfferTitle</h4>
+                        <h5>@obj.CompanyName</h5>
+                        <p>@offer.OfferDescription</p>
+                    <div class="tags">
+                    <div class="tag">Tax</div> 
+                    <div class="tag">Management</div> 
+                    <div class="tag">Finances</div>
+                </div>
+              </div>
+              
+              </form>
+              </div>
+                    </a>
             
-            }
-        
-                      @*<td>@obj.OfferDescription</td>*@
-        
+            }          
     }
-    </tbody>
-</table>
+    </div>
+       <div style="clear:both;"></div>
+
+    </main>
 

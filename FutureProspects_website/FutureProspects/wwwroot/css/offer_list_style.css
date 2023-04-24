@@ -1,0 +1,173 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul {
+  /*list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  background-color: #e8f5fd;*/
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+  background-color: #384661;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+li {
+  display: table-row;
+  flex-grow: 3;
+  text-align: center;
+  margin: 4px;
+}
+
+li a {
+  font-family: 'Charlie-text-SB', sans-serif;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  border-radius: 15px;
+}
+
+/*nav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  display: block;
+}*/
+li a:hover {
+  background-color: #172a42;
+}
+
+#searchBox {
+  width: 250px;
+  height: 30px;
+  padding: 4px;
+  margin-left: 40px;
+  border-radius: 8px;
+}
+
+.container {
+  /* width: 1400px; */
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  min-height: 1000px;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.filters {
+  /* float: left; */
+  /* width: 200px; */
+  padding: 20px;
+  border: 1px solid #2f3336;
+  margin-top: 30px;
+  max-height: 50%;
+}
+
+.filters h2 {
+  margin: 10px 0 10px;
+}
+
+h4,
+h5,
+p {
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.none {
+  display: none;
+}
+
+main {
+  /* float: left; */
+  /* width: 1098px; */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+}
+
+footer {
+  background-color: lightblue;
+  text-align: center;
+  color: white;
+  position: absolute;
+  width: 100%;
+}
+
+.jobOffers {
+  /* min-height: 202px; */
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 100%;
+}
+
+.offerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 80%;
+}
+
+.jobOffer {
+  display: grid;
+  /* width: 450px; */
+  flex-basis: 45%;
+  height: auto;
+  /* box-sizing: content-box; */
+  /* height: 140px; */
+  border: 1px solid #2f3336;
+  margin-bottom: 30px;
+  margin-right: 30px;
+  padding: 30px;
+  max-height: 40%;
+}
+
+.jobOfferImg {
+  display: inline-block;
+  width: 146px;
+  height: 126px;
+  margin-top: 7px;
+}
+
+.jobOfferImg img {
+  width: 126px;
+  height: 126px;
+}
+
+.content {
+  /* width: 282px; */
+}
+
+.tags {
+  height: 28px;
+}
+
+.tag {
+  display: inline-block;
+  border: 1px solid #2f3336;
+  padding: 3px 7px 3px 7px;
+  margin-right: 5px;
+}
