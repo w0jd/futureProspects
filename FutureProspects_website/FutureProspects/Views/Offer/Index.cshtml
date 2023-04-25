@@ -1,8 +1,8 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
-@inject IHttpContextAccessor HttpContextAccessor
-@model IEnumerable<Empolyer>
+@inject IHttpContextAccessor HttpContextAccessor;
+@model IEnumerable<Empolyer>;
 
 
   <head>
@@ -15,7 +15,7 @@
       <div class="filters">
         <h2>Filters</h2>
         <p>City</p>
-        <form>
+        <form >
           <input type="checkbox" id="City1" name="City1" value="Katowice">
           <label for="Katowice">Katowice</label><br>
           <input type="checkbox" id="City2" name="City2" value="Gliwice">
@@ -55,30 +55,30 @@
                 </tr>*@
                     <a style="none" asp-controller="Offer" asp-action="jobOffer" asp-route-id="@offer.Id">
                     <div class="jobOffer">
-                        <form >
-                  <div class="jobOfferImg">
-                  <img src="../media/logo_polsl.png"alt="logo">
-                </div>
-                <div class="content">
-                    <p class="none"> @offer.Id</p> 
-                        <h4>>@offer.OfferTitle</h4>
+                     <form class="jobForm">
+                       <div class="jobOfferImg">
+                        <img src="../media/logo_polsl.png"alt="logo">
+                       </div>
+                       <div class="content">
+                        <p class="none"> @offer.Id</p> 
+                        <h4>@offer.OfferTitle</h4>
                         <h5>@obj.CompanyName</h5>
                         <p>@offer.OfferDescription</p>
-                    <div class="tags">
-                    <div class="tag">Tax</div> 
-                    <div class="tag">Management</div> 
-                    <div class="tag">Finances</div>
-                </div>
-              </div>
+                        <div class="tags">
+                           <div class="tag">Tax</div> 
+                           <div class="tag">Management</div> 
+                           <div class="tag">Finances</div>
+                        </div>
+                      </div>
               
-              </form>
-              </div>
+                     </form>
+                    </div>
                     </a>
             
             }          
     }
     </div>
-       <div style="clear:both;"></div>
+@*       <div style="clear:both;"></div>*@
 
     </main>
 
