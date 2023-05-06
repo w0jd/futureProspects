@@ -14,6 +14,7 @@
         [ForeignKey("Empolyer")]
         public int EmpolyerId { get; set; }
         public Empolyer Empolyer { get; set; }
+        public ICollection<EmployeeOffer>? EmployeeOffer { get; set; }
 
     }
 }
