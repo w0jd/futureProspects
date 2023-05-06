@@ -11,6 +11,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - FutureProspects</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="~/js/search.js" async await> </script>
 @*    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/main_site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/FutureProspects.styles.css" asp-append-version="true" />*@
@@ -52,7 +53,9 @@
                     <li><a id="logo" asp-action="MainSelection" asp-controller="Home">Future Prospects></a></li>
                 }
                 else{
-                  <li><input type="text" id="searchBox" placeholder="Search"></li>
+
+
+                    <li>   <form asp-controller="Offer" asp-action="IndexPost" name="IndexPost" method="post" onsubmit="submitForm(event)"><input type="text" id="searchBox" name="search" placeholder="Search"></form></li>
                 
                 }
                 @if (User.Identity.IsAuthenticated)

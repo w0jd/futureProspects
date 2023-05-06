@@ -83,9 +83,9 @@
 <div id="overlay"></div>
 
 <div class="apply" id="apply">
-    <div class="form">
+    <form class="form" method="post" asp-controller="Offer" asp-action="Applay" name="Applay" asp-route-id="@Model.Offer.Id">
         <div class="form-element">
-            <button>Aplikuj</button>
+            <button type="submit">Aplikuj</button>
         </div>
         <div class="form-element">
             <button>Pokaż numer pracodawcy</button>
@@ -97,5 +97,5 @@
                 <li><button><img src="~/icons/share.png" alt="Share"></button></li>
             </ul>
         </div>
-    </div>
+    </form>
 </div>

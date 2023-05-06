@@ -85,6 +85,10 @@
       "PackagePath": "staticwebassets\\js\\main_page.js"
     },
     {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\js\\search.js",
+      "PackagePath": "staticwebassets\\js\\search.js"
+    },
+    {
       "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
@@ -327,6 +331,14 @@
     {
       "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\logo_polsl.png",
       "PackagePath": "staticwebassets\\media\\logo_polsl.png"
+    },
+    {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\pexels-photo-3183150.jpeg",
+      "PackagePath": "staticwebassets\\media\\pexels-photo-3183150.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\pexels-photo-3184339.webp",
+      "PackagePath": "staticwebassets\\media\\pexels-photo-3184339.webp"
     },
     {
       "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\polsl.jpg",

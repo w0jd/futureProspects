@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mJhuDDWJa4+mtiEpdWk0WT937zxRPg9RW2vchTiteRc=",
+  "Hash": "xY27iggB2FRSs/jzJcSZ7Rrm1HNPgvFbEHtgCQYZpGY=",
   "Source": "FutureProspects",
   "BasePath": "_content/FutureProspects",
   "Mode": "Default",
@@ -389,6 +389,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\main_page.js"
+    },
+    {
+      "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\js\\search.js",
+      "SourceId": "FutureProspects",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\",
+      "BasePath": "_content/FutureProspects",
+      "RelativePath": "js/search.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\search.js"
     },
     {
       "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\js\\site.js",
@@ -1426,6 +1443,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\media\\logo_polsl.png"
+    },
+    {
+      "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\pexels-photo-3183150.jpeg",
+      "SourceId": "FutureProspects",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\",
+      "BasePath": "_content/FutureProspects",
+      "RelativePath": "media/pexels-photo-3183150.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\pexels-photo-3183150.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\pexels-photo-3184339.webp",
+      "SourceId": "FutureProspects",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\",
+      "BasePath": "_content/FutureProspects",
+      "RelativePath": "media/pexels-photo-3184339.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\pexels-photo-3184339.webp"
     },
     {
       "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\polsl.jpg",

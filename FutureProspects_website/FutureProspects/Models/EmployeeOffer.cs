@@ -8,7 +8,7 @@
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         int Id;
         [Required]
-        [ForeignKey("Empolyer")]
+        [ForeignKey("Empolyee")]
         public int EmployeeId { get; set; }
         public Employee Employee { get; set; }
         [Required]

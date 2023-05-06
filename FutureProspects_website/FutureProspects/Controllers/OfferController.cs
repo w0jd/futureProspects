@@ -8,6 +8,7 @@ namespace FutureProspects.Controllers
     {
         private readonly ApplicationDbContext _db;
         public  OfferController(ApplicationDbContext db) => _db = db;//przekzanie połączenia
+        [HttpGet ]
         public IActionResult Index()
         {
             IEnumerable<Offer> objOfferList = _db.Offers.ToList();
@@ -15,10 +16,25 @@ namespace FutureProspects.Controllers
 
             return View(OfferData);
         }
+        [HttpPost("Index")]
+
+        public IActionResult IndexPost(searchRequest request)
+        {
+
+            var offerData = _db.Empolyers.Include(e => e.Offer).ToList();
+            var searchedOffers = new List<Offer>();
+            foreach (var employer in offerData)
+            {
+                var offers = employer.Offer.Where(o => o.OfferTitle.Contains(request.searchedText));
+                searchedOffers.AddRange(offers);
+            }
+
+            return RedirectToAction("Index", searchedOffers);
+        }
         public IActionResult jobOffer(int? id)
         {
             var objOffer = _db.Offers.Find(id);
-            var objEmpolyer = _db.Empolyers.Find(objOffer.EmpolyerId);
+            var objEmpolyer = _db.Empolyers.Find(objOffer?.EmpolyerId);
             /*var OfferDataa = _db.Empolyers.Include(e=>objOfferList);*/
             var model = new JobOfferModel
             {
@@ -27,6 +43,29 @@ namespace FutureProspects.Controllers
             };
 
             return View(model);
+        }
+        [HttpPost("jobOffer")]
+        public async Task<IActionResult> Applay(int? id )
+        {
+            var userName=User.FindFirst(ClaimTypes.Name).Value;
+
+           var userId = _db.Employees.First(u=>u.Email==userName).Id;
+            if (_db.EmployeeOffers.Find(id,userId)!=null) {
+                return RedirectToAction("Index", "Offer");
+
+
+            }
+            else
+            {
+                var employeeOffer = new EmployeeOffer
+                {
+                    EmployeeId = userId,
+                    OfferId = id.Value
+                };
+                _db.EmployeeOffers.Add(employeeOffer);
+                await _db.SaveChangesAsync();
+            }
+            return RedirectToAction("Index", "Offer");
         }
     }
 }
