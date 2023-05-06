@@ -38,15 +38,6 @@ body {
     src: url("../fonts/Charlie_Text-Semibold.woff2") format('woff2');
 }
 
-#logo{
-    display: block;
-    color: white;
-    font-size: 26px;
-    text-align: center;
-    padding: 8px;
-    text-decoration: none;
-}
-
 #bar {
     list-style-type: none;
     display:flex;
@@ -69,7 +60,20 @@ body {
     text-align:center;
     margin:4px;
 }
-#bar li a {
+
+#bar .logo{
+    display: block;
+    text-align: center;
+    padding: 8px;
+}
+
+#bar .logo a {
+    color: white;
+    font-size: 26px;
+    text-decoration: none;
+}
+
+#bar .option a {
     font-family: 'Charlie-display-SB', sans-serif;
     display: block;
     color: white;
@@ -79,9 +83,10 @@ body {
     border-radius: 15px;
 }
 
-#bar li a:hover {
+#bar .option a:hover {
     background-color: #172a42;
 }
+
 #left, #right {
     width: 50%;
     height: 100%;
