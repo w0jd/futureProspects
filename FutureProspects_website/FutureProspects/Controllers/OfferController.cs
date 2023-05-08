@@ -9,10 +9,18 @@ namespace FutureProspects.Controllers
         private readonly ApplicationDbContext _db;
         public  OfferController(ApplicationDbContext db) => _db = db;//przekzanie połączenia
         [HttpGet ]
-        public IActionResult Index()
+        public IActionResult Index(IEnumerable<Offer>? list)
         {
             IEnumerable<Offer> objOfferList = _db.Offers.ToList();
-            var OfferData  = _db.Empolyers.Include(e=> e.Offer);
+            var SearchOfferData = list;
+
+            if (SearchOfferData==null)
+            {
+              
+                return View(SearchOfferData);
+
+            }
+            var OfferData = _db.Empolyers.Include(e => e.Offer);
 
             return View(OfferData);
         }
@@ -21,15 +29,12 @@ namespace FutureProspects.Controllers
         public IActionResult IndexPost(searchRequest request)
         {
 
-            var offerData = _db.Empolyers.Include(e => e.Offer).ToList();
-            var searchedOffers = new List<Offer>();
-            foreach (var employer in offerData)
-            {
-                var offers = employer.Offer.Where(o => o.OfferTitle.Contains(request.searchedText));
-                searchedOffers.AddRange(offers);
-            }
+            var empolyerData = _db.Empolyers.Include(e => e.Offer.Where(o => o.OfferTitle.Contains(request.searchedText)));
+            return View("Index", empolyerData);
 
-            return RedirectToAction("Index", searchedOffers);
+       
+
+
         }
         public IActionResult jobOffer(int? id)
         {

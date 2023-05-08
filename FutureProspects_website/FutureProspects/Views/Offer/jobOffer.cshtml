@@ -20,11 +20,18 @@
         </div>
         <div id="job_details">
             <ul id="tags">
-                <li><a>Umowa o pracę</a></li>
+              @*  <li><a>Umowa o pracę</a></li>
                 <li><a>Pełny etat</a></li>
                 <li><a>Praca hybrydowa</a></li>
                 <li><a>C++</a></li>
-                <li><a>C#</a></li>
+                <li><a>C#</a></li>*@
+                @{
+                    var array = Model.Offer.Tags.Split(";");
+                    foreach (string element in array)
+                    {
+                        <li><a>@element</a> </li>
+                    }
+                }
             </ul>
         </div>
     </div>
@@ -36,12 +43,21 @@
             <h1>Zakres obowiązków:</h1>
         </div>
         <div id="duties">
+            <ul id="duties_table">
+            @{
+                 array = Model.Offer.OfferDescription.Split(";");
+                foreach (string element in array)
+                {
+                    <li>@element </li>
+                }
+            }
+            </ul>
        @*     <ul id="duties_table">
                 <li>Implementacja procesów biznesowych</li>
                 <li>Tworzenie dokumentacji technicznej do systemu</li>
                 <li>Ścisła współpraca z liderami obszarów</li>
             </ul>*@
-            @Model.Offer.OfferDescription
+       @*     @Model.Offer.OfferDescription*@
         </div>
     </div>
 </div>
@@ -52,14 +68,21 @@
             <h1>Nasze wymagania:</h1>
         </div>
         <div id="requirements">
-            @Model.Offer.SkllsRequred
-@*            <ul id="requirements_table">
-                <li>Angielski (minimum B2) - znajomość innych języków obcych jest cennym atutem</li>
+            @*@Model.Offer.SkllsRequred*@
+            <ul id="requirements_table">
+                @{
+                    array = Model.Offer.SkllsRequred.Split(";");
+                    foreach (string element in array)
+                    {
+                        <li>@element </li>
+                    }
+                }
+@*                <li>Angielski (minimum B2) - znajomość innych języków obcych jest cennym atutem</li>
                 <li>Polski (minimum C1)</li>
                 <li>Podstawowa znajomość procesów biznesowych w organizacjach</li>
                 <li>Umiejętność programowania minimum w jednym z wymienionych języków (ABAP, Java, C#, C++, Python, JavaScript, Visual Basic – VBS/VB.NET) przynajmniej na podstawowym poziomie</li>
-                <li>Zaangażowanie i chęć nauki</li>
-            </ul>*@
+                <li>Zaangażowanie i chęć nauki</li>*@
+            </ul>
         </div>
     </div>
 </div>
@@ -71,10 +94,17 @@
         </div>
         <div id="offers">
             <ul id="offers_table">
-                <li>Współpracę w oparciu o umowę o pracę, o zlecenie lub kontrakt B2B</li>
+             @*   <li>Współpracę w oparciu o umowę o pracę, o zlecenie lub kontrakt B2B</li>
                 <li>Duże możliwości rozwoju i podnoszenia swoich umiejętności</li>
                 <li>Praca przy wielu ciekawych projektach dla liderów wielu branż</li>
-                <li>Zdobycie doświadczenia przy projektowaniu i wdrażaniu systemów SAP (SAP ECC, S/4HANA, PI/PO/CPI), Salesforce, Mulesoft, Microsoft</li>
+                <li>Zdobycie doświadczenia przy projektowaniu i wdrażaniu systemów SAP (SAP ECC, S/4HANA, PI/PO/CPI), Salesforce, Mulesoft, Microsoft</li>*@
+                @{
+                    array = Model.Offer.weOffer.Split(";");
+                    foreach (string element in array)
+                    {
+                        <li>@element </li>
+                    }
+                }
             </ul>
         </div>
     </div>

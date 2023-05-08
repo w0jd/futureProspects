@@ -65,9 +65,13 @@
                         <h5>@obj.CompanyName</h5>
                         <p>@offer.OfferDescription</p>
                         <div class="tags">
-                           <div class="tag">Tax</div> 
-                           <div class="tag">Management</div> 
-                           <div class="tag">Finances</div>
+                          @{
+                             var array = offer.Tags.Split(";");
+                             foreach (string element in array)
+                             {
+                              <div class="tag">@element </div>
+                             }
+                          }
                         </div>
                       </div>
               

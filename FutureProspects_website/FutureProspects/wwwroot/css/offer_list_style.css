@@ -30,6 +30,12 @@ li {
   text-align: center;
   margin: 4px;
 }
+div>a{
+    flex-basis:45%;
+    display:flex;
+    border:solid;
+    margin:1em;
+}
 
 li a {
   font-family: 'Charlie-text-SB', sans-serif;
@@ -63,16 +69,17 @@ li a:hover {
 }
 
 .container {
-  /* width: 1400px; */
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 30px;
-  min-height: 1000px;
-  flex-wrap: wrap;
-  flex-basis: 100%;
-  margin: 0;
-  padding: 0;
+    /* width: 1400px; */
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    min-height: 1000px;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
 }
 
 .filters {
@@ -136,9 +143,9 @@ footer {
 }
 
 .jobOffer {
-    display: grid;
+    display: flex;
     /* width: 450px; */
-    flex-basis: 45%;
+    flex-basis: 100%;
     height: auto;
     /* box-sizing: content-box; */
     /* height: 140px; */
@@ -150,8 +157,9 @@ footer {
     padding: 30px;
 }
 .jobForm {
-    border: 1px solid #2f3336;
+   /* border: 1px solid #2f3336;*/
     padding: 1vh;
+    flex-basis:100%
 }
 a>form {
     border: 1px solid #2f3336;
@@ -168,21 +176,27 @@ a>form {
   width: 126px;
   height: 126px;
 }
-li {
-    grid-template-rows: 10% 80% 10%;
-    display:grid;
-}
+
 .content {
   /* width: 282px; */
 }
- 
-.tags {
-  height: 28px;
+.searchForm{
+    display:grid;
+    grid-template-rows:10% 80% 10%;
 }
-
+.tags {
+    height: 28px;
+    display:flex;
+    flex-wrap:wrap;
+}
+#bar>li{
+    display:grid;
+}
 .tag {
   display: inline-block;
+  display:flex;
   border: 1px solid #2f3336;
   padding: 3px 7px 3px 7px;
   margin-right: 5px;
+  margin:0.4vh;
 }

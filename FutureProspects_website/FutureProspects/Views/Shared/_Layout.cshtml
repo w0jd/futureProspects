@@ -48,15 +48,18 @@
   
   <nav>
     <ul id="bar">
-                @if (currentUrl != "/Offer")
+                @if (currentUrl != "/Offer" && currentUrl!="/Index" )
                 {
                     <li><a id="logo" asp-action="MainSelection" asp-controller="Home">Future Prospects></a></li>
+            
+
                 }
+
                 else{
+        
 
+                    <li>   <form class="searchForm" asp-controller="Offer" asp-action="IndexPost" name="IndexPost" method="post" onsubmit="submitForm(event)"><input type="text" id="searchBox" name="searchedText" placeholder="Search"></form></li>
 
-                    <li>   <form asp-controller="Offer" asp-action="IndexPost" name="IndexPost" method="post" onsubmit="submitForm(event)"><input type="text" id="searchBox" name="search" placeholder="Search"></form></li>
-                
                 }
                 @if (User.Identity.IsAuthenticated)
                 {

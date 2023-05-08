@@ -11,8 +11,13 @@
         public string SkllsRequred { get; set; }
         public int ?Salary { get; set; }
         [Required]
+        public string Tags { get; set; }
+        [Required]
+        public string weOffer { get; set; }
+        [Required]
         [ForeignKey("Empolyer")]
         public int EmpolyerId { get; set; }
+
         public Empolyer Empolyer { get; set; }
         public ICollection<EmployeeOffer>? EmployeeOffer { get; set; }
 
