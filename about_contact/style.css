@@ -94,9 +94,9 @@ li a:hover {
 
 section {
   margin-bottom: 20px;
-  background-color: #ccc;
+  background-color: #fff;
   padding: 15px;
-  border-radius: 15px;
+  border-radius: 10px;
   /* opacity: 0.95; */
 }
 
