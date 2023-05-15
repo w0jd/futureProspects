@@ -30,6 +30,10 @@ namespace FutureProspects.Models
         public string? City { get; set; }
         [StringLength(maximumLength: 60)]
         public string? Faculty { get; set; }
+        public string? Tags { get; set; }
+        public string? Summary { get; set; }
+        public string? Skills { get; set; }
+        public string? Experiance { get; set; }
         public string? VerificationToken { get; set; }
         public DateTime? VerifiedAt { get; set; }
         public string? PasswordResetToen { get; set; }

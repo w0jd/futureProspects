@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\offer_style.css"
     },
     {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\profile_style.css",
+      "PackagePath": "staticwebassets\\css\\profile_style.css"
+    },
+    {
       "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\selction_style.css",
       "PackagePath": "staticwebassets\\css\\selction_style.css"
     },

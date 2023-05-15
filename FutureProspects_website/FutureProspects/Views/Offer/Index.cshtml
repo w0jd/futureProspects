@@ -11,28 +11,28 @@
     <link rel="stylesheet" type="text/css" href="~/css/offer_list_style.css">
   </head>
 
-    <div class="container">
-      <div class="filters">
+<div class="container">
+    <div class="filters">
         <h2>Filters</h2>
         <p>City</p>
-        <form >
-          <input type="checkbox" id="City1" name="City1" value="Katowice">
-          <label for="Katowice">Katowice</label><br>
-          <input type="checkbox" id="City2" name="City2" value="Gliwice">
-          <label for="Gliwice">Gliwice</label><br>
-          <input type="checkbox" id="City3" name="City3" value="Ruda Śląska">
-          <label for="Ruda Śląska">Ruda Śląska</label><br>
+        <form>
+            <input type="checkbox" id="City1" name="City1" value="Katowice">
+            <label for="Katowice">Katowice</label><br>
+            <input type="checkbox" id="City2" name="City2" value="Gliwice">
+            <label for="Gliwice">Gliwice</label><br>
+            <input type="checkbox" id="City3" name="City3" value="Ruda Śląska">
+            <label for="Ruda Śląska">Ruda Śląska</label><br>
         </form>
         <p>Type</p>
         <input type="checkbox" id="Type1" name="Type1" value="Internship">
-          <label for="Internship">Internship</label><br>
-          <input type="checkbox" id="Type2" name="Type2" value="EmploymentContract">
-          <label for="EmploymentContract">Employment contract</label><br>
-          <input type="checkbox" id="Type3" name="Type3" value="ContractForWork">
-          <label for="ContractForWork">Contract for work</label><br>
+        <label for="Internship">Internship</label><br>
+        <input type="checkbox" id="Type2" name="Type2" value="EmploymentContract">
+        <label for="EmploymentContract">Employment contract</label><br>
+        <input type="checkbox" id="Type3" name="Type3" value="ContractForWork">
+        <label for="ContractForWork">Contract for work</label><br>
     </div>
 
-    <main class="offerContainer">
+    <main>
         <div class="jobOffers">
       
         @foreach (var obj in Model)
@@ -41,22 +41,12 @@
  
             @foreach (var offer in obj.Offer)
             {
-                
-             @*     <tr>
-                    <td> @obj.CompanyName</td>
-                    <td>@obj.Email</td>
-                    <td> @obj.Phone</td>
-                    
-                    <td>@offer.OfferTitle</td>
-                    <td>@offer.OfferDescription</td>
-                    <td>@offer.SkllsRequred</td>
-                    <td>@offer.Salary</td>
-                    <td>@obj.Offer</td>
-                </tr>*@
-                    <a style="none" asp-controller="Offer" asp-action="jobOffer" asp-route-id="@offer.Id">
-                    <div class="jobOffer">
-                     <form class="jobForm">
-                       <div class="jobOfferImg">
+
+
+                    <a  class="jobOffer" asp-controller="Offer" asp-action="jobOffer" asp-route-id="@offer.Id">
+
+
+                        <div class="jobOfferImg">
                         <img src="../media/logo_polsl.png"alt="logo">
                        </div>
                        <div class="content">
@@ -75,14 +65,14 @@
                         </div>
                       </div>
               
-                     </form>
-                    </div>
+                   
+                   
                     </a>
             
             }          
     }
+   
     </div>
-@*       <div style="clear:both;"></div>*@
 
     </main>
-
+</div>

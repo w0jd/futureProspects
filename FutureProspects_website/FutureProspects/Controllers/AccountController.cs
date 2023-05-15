@@ -20,10 +20,7 @@ namespace FutureProspects.Controllers
                    HttpContext.SignOutAsync();
                    return RedirectToAction("Index","Home");
                }
-               /*       public IActionResult Index()
-                      {
-                          return View();
-                      }*/
+
 
         private readonly ApplicationDbContext _context;
         public AccountController(ApplicationDbContext context)

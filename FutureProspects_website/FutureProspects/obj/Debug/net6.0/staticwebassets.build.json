@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xY27iggB2FRSs/jzJcSZ7Rrm1HNPgvFbEHtgCQYZpGY=",
+  "Hash": "B44aYoPtFhG/8t/Klm5O69RA6j3msSqnavhgYqWkl6I=",
   "Source": "FutureProspects",
   "BasePath": "_content/FutureProspects",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\offer_style.css"
+    },
+    {
+      "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\profile_style.css",
+      "SourceId": "FutureProspects",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\",
+      "BasePath": "_content/FutureProspects",
+      "RelativePath": "css/profile_style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\profile_style.css"
     },
     {
       "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\css\\selction_style.css",

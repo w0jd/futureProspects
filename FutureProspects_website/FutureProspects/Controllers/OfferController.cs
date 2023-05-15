@@ -8,7 +8,7 @@ namespace FutureProspects.Controllers
     {
         private readonly ApplicationDbContext _db;
         public  OfferController(ApplicationDbContext db) => _db = db;//przekzanie połączenia
-        [HttpGet ]
+        [HttpGet("Index")]
         public IActionResult Index(IEnumerable<Offer>? list)
         {
             IEnumerable<Offer> objOfferList = _db.Offers.ToList();
