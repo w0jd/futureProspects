@@ -11,7 +11,7 @@ body {
 
 main {
     padding: 30px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../Inne/polsl.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url("../media/polsl.jpg");
     backdrop-filter: blur(15px);
     background-repeat: no-repeat;
     background-size: 250vh;
@@ -77,13 +77,13 @@ footer {
         padding: 8px;
     }
 
-        #bar .logo a {
+        #bar .logo {
             color: #4E7BCE;
             font-size: 26px;
             text-decoration: none;
         }
 
-    #bar .option a {
+    #bar .option {
         font-family: 'Charlie-text-SB', sans-serif;
         display: block;
         color: black;
@@ -94,7 +94,7 @@ footer {
         transition: background-color 0.5s ease-in-out;
     }
 
-        #bar .option a:hover {
+        #bar .option:hover {
             text-shadow: 1px 1px #cea24e;
             text-decoration: underline #cea24e;
             text-underline-offset: 8px;
