@@ -1,0 +1,73 @@
+﻿
+@*umożliwa dostęp do danych z modelu i kontrolera*@
+@inject IHttpContextAccessor HttpContextAccessor;
+<head>
+    <link rel="stylesheet" type="text/css" href="~/css/main_style.css">
+</head>
+
+
+    <div font-changing class="greeting">
+        <span>
+          <div id="blank1"></div>
+          Welcome to <br> 
+          Future Prospects
+        </span>
+      </div>
+
+
+    <div class="call">
+        <button class="button" data-popup-target="#popup">Start now!</button>
+    </div>
+
+    <div class="popup" id="popup">
+
+        <div data-close-button class="close-button">&times;</div>
+    <form class="form" asp-action="Login" name="Login" asp-controller="Account">
+            <h2>Log in</h2>
+            <div class="form-element">
+                <label for="email">Email</label>
+            <input type="text" id="email" placeholder="Enter email" name="email">
+            </div>
+
+            <div class="form-element">
+                <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter password" name="password">
+            </div>
+
+            <div class="form-element">
+                <input type="checkbox" id="checkbox">
+                <label for="checkbox">Remember me</label>
+            </div>
+
+            <div class="form-element">
+                <button>Sign in</button>
+            </div>
+
+            <div class="form-element">
+                <a asp-action="registerEmployee" asp-controller="Account">Don't have an account? Register now!</a>
+            </div>
+        </form>
+    </div>
+
+    <div id="overlay"></div>
+    <!--
+    <a href="../register/register_employee.html">
+      <button class="button">Register as Student</button>
+    </a>
+    <a href="../register/register_employer.html">
+      <button class="button">Register as Employer</button>
+    </a>
+    -->
+
+@if (User.Identity.IsAuthenticated)
+{
+        <p>Logged in as: @HttpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Name).Value</p>
+}
+
+
+@if (TempData["success"] != null)
+{
+        <h2>@TempData["success"]</h2>
+
+}
+<script src="../js/main_page.js"></script>

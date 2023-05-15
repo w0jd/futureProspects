@@ -1,0 +1,71 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@inject IUrlHelper Url
+
+@{
+    string currentUrl = Context.Request.Path.ToString();
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FutureProspects</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <script src="~/js/search.js" async await> </script>
+
+</head>
+ 
+<body>
+
+  <header>
+   
+
+  
+  <nav>
+    <ul id="bar">
+                <li><a class="logo" asp-action="MainSelection" asp-controller="Home">Future Prospects></a></li>
+                @if (currentUrl != "/Offer" && currentUrl!="/Index" )
+                {
+                    
+            
+
+                }
+
+                else{
+        
+
+                    <li>   <form class="searchForm"  asp-controller="Offer" asp-action="IndexPost" name="IndexPost" method="post" onsubmit="submitForm(event)"><input type="text" id="searchBox" name="searchedText" placeholder="Search"></form></li>
+
+                }
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <li><a asp-action="Index" asp-controller="Profile" class="option">Welcone in: @HttpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.Name).Value</a></li>
+                    <li><a class="option" asp-controller="Account" asp-action="">Logout </a></li>
+                }
+
+        @*    <li><a asp-area="" asp-controller="Home" asp-action="Index">Main Page</a></li>*@
+                <li><a class="option"  asp-area="" asp-controller="Offer" asp-action="Index">Offers</a></li>
+            <li><a  class="option" asp-area="" asp-controller="Home" asp-action="Contact">About Us and Contact</a></li>
+       @*     <li><a asp-area="" asp-controller="Account" asp-action="registerEmployee">Register Student</a></li>
+            <li><a asp-area="" asp-controller="Account" asp-action="registerEmployer">register Employer</a></li>*@
+            
+      </ul>
+ 
+  </nav>
+ </header>
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+
+
+
+    <footer>
+      <p>Copyright © Content Gang XD</p>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
