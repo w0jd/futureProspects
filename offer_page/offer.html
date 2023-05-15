@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Future Prospects</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <script defer src="../scripts/main_page.js"></script>
@@ -20,16 +20,16 @@
 <main >
     <div class="block" id="block1">
         <div class="container">
-            <div  id="company_logo">
+            <div  class="container-element" id="company_logo">
                 <img src="../Inne/logo.png" alt="Future Prospects">
             </div>
-            <div  id="comany_details">
+            <div  class="container-element" id="company_details">
                 <ul id ="table1">
-                    <li><h1>C++ Developer</h1></li>
+                    <li><span id="job_title">C++ Developer</span></li>
                     <li><a href="../register/register_employee.html">Future Prospects</a></li>
                 </ul>
             </div>
-            <div  id="job_details">
+            <div  class="container-element" id="job_details">
                 <ul id="tags">
                     <li><a>Contract of employment</a></li>
                     <li><a>Full time</a></li>
@@ -44,7 +44,7 @@
     <div class="block" id="block2">
         <div class="container">
             <div>
-                <h1>Responsibilities:</h1>
+                <span class="h">Responsibilities:</span>
             </div>
             <div  id="duties">
                 <ul id ="duties_table">
@@ -59,7 +59,7 @@
     <div class="block" id="block3">
         <div class="container">
             <div>
-                <h1>Our requirements:</h1>
+                <span class="h">Our requirements:</span>
             </div>
             <div  id="requirements">
                 <ul id ="requirements_table">
@@ -76,7 +76,7 @@
     <div class="block" id="block4">
         <div class="container">
             <div>
-                <h1>We offer:</h1>
+                <span class="h">We offer:</span>
             </div>
             <div  id="offers">
                 <ul id ="offers_table">
@@ -93,11 +93,15 @@
 
     <div class="apply" id="apply">
         <div class="form">
-            <div class="form-element">
-                <button>Apply</button>
-            </div>
-            <div class="form-element">
-                <button>Show employer phone number</button>
+            <div class="apply_buttons">
+                <ul>
+                    <li><div>
+                        <button>Apply</button>
+                    </div></li>
+                    <li><div>
+                        <button>Number</button>
+                    </div></li>
+                </ul>
             </div>
             <div class="form-list">
                 <ul>
@@ -111,7 +115,7 @@
 
 </main>
 <footer>
-    <p>Copyright © Content Gang</p>
+    <p>Copyright © Content Group</p>
 </footer>
 
 </body>
