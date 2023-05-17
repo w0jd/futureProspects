@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B44aYoPtFhG/8t/Klm5O69RA6j3msSqnavhgYqWkl6I=",
+  "Hash": "XpXv3etlCr66gjDwfnebVyq7yaItHVr0fFZ9SmpKWiA=",
   "Source": "FutureProspects",
   "BasePath": "_content/FutureProspects",
   "Mode": "Default",
@@ -1443,6 +1443,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\family_photo.png",
+      "SourceId": "FutureProspects",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\",
+      "BasePath": "_content/FutureProspects",
+      "RelativePath": "media/family_photo.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\media\\family_photo.png"
     },
     {
       "Identity": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\logo_polsl.png",

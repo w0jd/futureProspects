@@ -1,7 +1,12 @@
-﻿<form name="loginForm" onsubmit="return validateform()" asp-action="Login" method="post">
-	<label for="email">email:</label>
-	<input type="text" id="email" name="email">
-	<label for="password">password:</label>
-	<input type="password" id="password" name="password">
+﻿@model UserLoginRequest
+<form name="loginForm" onsubmit="return validateform()" asp-action="Login" method="post">
+	<label asp-for="email" for="email">email:</label>
+	<input asp-for="email" type="text" id="email" name="email">
+	<span asp-validation-for="email" class="text-danger"></span>
+
+	<label asp-for="password" for="password">password:</label>
+	<input asp-for="password" type="password" id="password" name="password">
+	<span asp-validation-for="password" class="text-danger"></span>
+
 	<button type="submit">dadawda</button>
 </form>

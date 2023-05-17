@@ -333,6 +333,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\family_photo.png",
+      "PackagePath": "staticwebassets\\media\\family_photo.png"
+    },
+    {
       "Id": "C:\\Users\\Wojtek\\Documents\\GitHub\\futureProspects\\FutureProspects_website\\FutureProspects\\wwwroot\\media\\logo_polsl.png",
       "PackagePath": "staticwebassets\\media\\logo_polsl.png"
     },

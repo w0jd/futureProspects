@@ -1,49 +1,69 @@
-﻿
+﻿@model EmpolyerRegiserRequset
+<head>
+ <meta charset="UTF-8">
+  <title>Future Prospects</title>
+  <link rel="stylesheet" type="text/css" href="~/css/style_registster.css">   
+</head>
 <main>
     <section id="register">
         <h2>Employers profile</h2>
         <form name="RegisterEmpolyer" onsubmit="return validateform()" asp-action="RegisterEmpolyer" method="post">
             <h4>Common</h4>
 
-            <label for="CompanyName ">Company name:  <sup_label>*</sup_label>  </label>
-            <input type="text" id="company_name" name="CompanyName">
+            <label asp-for="CompanyName" for="CompanyName ">Company name:  <sup_label>*</sup_label>  </label>
+            <input asp-for="CompanyName" type="text" id="company_name" name="CompanyName">
+            <span asp-validation-for="CompanyName" class="text-danger"></span>
             <div class="data_error"><div id="error_company_name"></div></div><br>
 
-            <label for="Name">Name:  <sup_label>*</sup_label>  </label>
-            <input type="text" id="name" name="Name">
+            <label  asp-for="Name" for="Name">Name:  <sup_label>*</sup_label>  </label>
+            <input asp-for="Name" type="text" id="name" name="Name">
+            <span asp-validation-for="Name" class="text-danger"></span>
+
             <div class="data_error"><div id="error_name"></div></div><br>
 
-            <label for="Surname">Surname:  <sup_label>*</sup_label>  </label>
-            <input type="text" id="surname" name="Surname">
+            <label asp-for="Surname" for="Surname">Surname:  <sup_label>*</sup_label>  </label>
+            <input asp-for="Surname" type="text" id="surname" name="Surname">
+            <span asp-validation-for="Surname" class="text-danger"></span>
+
             <div class="data_error"><div id="error_surname"></div></div><br>
 
-            <label for="email"> Email:  <sup_label>*</sup_label>  </label>
-            <input type="email" id="email" name="email">
+            <label asp-for="Email" for="email"> Email:  <sup_label>*</sup_label>  </label>
+            <input asp-for="Email" type="email" id="email" name="email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+
             <div class="data_error"><div id="error_email"></div></div><br>
 
-            <label for="password">Password:  <sup_label>*</sup_label>  </label>
+            <label  for="password">Password:  <sup_label>*</sup_label>  </label>
             <input type="password" id="password" name="password" autocomplete="off">
             <div class="data_error"><div id="error_password"></div></div><br>
-            <label for="ConfirmPassword">ConfirmPassword:  <sup_label>*</sup_label>  </label>
-            <input type="password" id="password" name="ConfirmPassword" autocomplete="off">
+            <label  for="ConfirmPassword">ConfirmPassword:  <sup_label>*</sup_label>  </label>
+            <input  type="password" id="password" name="ConfirmPassword" autocomplete="off">
+         @*   <span asp-validation-for="ConfirmPassword" class="text-danger"></span>*@
+
             <div class="data_error"><div id="error_ConfirmPassword"></div></div>
-            <label for="Phone">Phone number:  <sup_label>*</sup_label>  </label>
-            <input type="number" id="phone phone_number" name="Phone">
+            <label asp-for="Phone" for="Phone">Phone number:  <sup_label>*</sup_label>  </label>
+            <input asp-for="Phone" type="number" id="phone phone_number" name="Phone">
+            <span asp-validation-for="Phone" class="text-danger"></span>
+
             <div class="data_error"><div id="error_phone_number"></div></div><br>
 
-            <label for="City">Address:  <span>*</span>  </label>
-            <input type="text" id="address" name="City">
+            <label asp-for="City" for="City">city:  <span>*</span>  </label>
+            <input   asp-for="City"  type="text" id="address" name="City">
+            <span asp-validation-for="City" class="text-danger"></span>
 
             <div class="data_error"><div id="error_address"></div></div><br>
-            <label for="Adress">Address:  <span>*</span>  </label>
-            <input type="text" id="address" name="Adress" />
+            <label asp-for="Adress" for="Adress">Address:  <span>*</span>  </label>
+            <input asp-for="Adress" type="text" id="address" name="Adress" />
+            <span asp-validation-for="Adress" class="text-danger"></span>
 
 
        
             <h4>Details</h4>
 
-            <label for="CompadnyDescription">Company description:</label>
-            <input type="text" id="company_description" name="CompadnyDescription">
+            <label asp-for="CompadnyDescription" for="CompadnyDescription">Company description:</label>
+            <input asp-for="CompadnyDescription" type="text" id="company_description" name="CompadnyDescription">
+            <span asp-validation-for="CompadnyDescription" class="text-danger"></span>
+
             <div class="data_error"><div id="error_company_description"></div></div><br>
 
 

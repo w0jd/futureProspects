@@ -10,6 +10,7 @@ namespace FutureProspects.Controllers
         {
             return View();
         }
+        [HttpGet]
         public IActionResult registerEmployer()
         {
             return View();
@@ -71,42 +72,55 @@ namespace FutureProspects.Controllers
         [HttpPost("Login")]
         private async Task SignInUser(string username)
         {
-            var claims = new List<Claim>
+          
+                var claims = new List<Claim>
             {
                 new Claim(ClaimTypes.Name, username),//tworzy coś w rodzaju obiektu o tuch wartościach
                 /**///new Claim("MyCustomClaim", "my claim value")
             };
 
-            var claimsIdentity = new ClaimsIdentity(
-                claims, CookieAuthenticationDefaults.AuthenticationScheme);//tworzy obiekt reprezentujący tożsamość uzytkownika składjący się z jego nazwy i typu uwierzytenienia 
+                var claimsIdentity = new ClaimsIdentity(
+                    claims, CookieAuthenticationDefaults.AuthenticationScheme);//tworzy obiekt reprezentujący tożsamość uzytkownika składjący się z jego nazwy i typu uwierzytenienia 
 
-            await HttpContext.SignInAsync(
-                CookieAuthenticationDefaults.AuthenticationScheme,
-                new ClaimsPrincipal(claimsIdentity));// zapisuje informacje o użytkownkiu w pliku cookie  claimsPrincipal reprezentuje identyfkacje i autoryzację użytkownika 
+                await HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity));// zapisuje informacje o użytkownkiu w pliku cookie  claimsPrincipal reprezentuje identyfkacje i autoryzację użytkownika 
+
+          
+                 RedirectToAction("Index", "Home");
             
         }
-        public async Task <IActionResult> Login(UserLoginRequest request)// w ajkiś sposób utworzenie w tym momęcie obiektu dopisuje do niego pasujące dane z formularza
+        public async Task<IActionResult> Login(UserLoginRequest request)// w ajkiś sposób utworzenie w tym momęcie obiektu dopisuje do niego pasujące dane z formularza
         {
-            var user =_context.Employees.First(u=>u.Email == request.email);
-            if (user == null)
+            if (ModelState.IsValid)
             {
-                TempData["success"] = "user not found";
+                var user = _context.Employees.First(u => u.Email == request.email);
+                if (user == null)
+                {
+                    TempData["success"] = "user not found";
+                    return RedirectToAction("Index", "Home");
+                }
+                /*    if (user.VerifiedAt == null)
+                    {
+                        return BadRequest("not verified");
+                    }*/
+                if (!VerifyPasswordHash(request.password, user.PasswordHash, user.PasswordSalt))
+                {
+                    TempData["success"] = "wrong password";
+                    return RedirectToAction("Index", "Home");
+
+                }
+                await SignInUser(user.Email);
+                var username = HttpContext.User.Identity.Name;
+                var u = username;
+                TempData["success"] = $"logged as {user.Email}";
                 return RedirectToAction("Index", "Home");
             }
-        /*    if (user.VerifiedAt == null)
+            else
             {
-                return BadRequest("not verified");
-            }*/
-            if (!VerifyPasswordHash(request.password, user.PasswordHash,user.PasswordSalt)) {
-                TempData["success"]="wrong password";
-                return RedirectToAction("Index", "Home");
+                return View("../Home/Index", request);
 
             }
-            await SignInUser(user.Email);
-            var username = HttpContext.User.Identity.Name;
-            var u = username;
-            TempData["success"] = $"logged as {user.Email}";
-            return RedirectToAction("Index", "Home");
         }
 
         private bool VerifyPasswordHash(string password,
@@ -129,25 +143,32 @@ namespace FutureProspects.Controllers
         [HttpPost("RegisterEmpolyer")]
         public IActionResult RegisterEmpolyer(EmpolyerRegiserRequset request)// w ajkiś sposób utworzenie w tym momęcie obiektu dopisuje do niego pasujące dane z formularza
         {
-            CreatePasswordHash(request.password, out byte[] passwordHash, out byte[] passwordSalt);
-            var empoler = new Empolyer
+            if (ModelState.IsValid)
             {
-                Name = request.Name,
-                CompanyName=request.CompanyName,
-                Surname = request.Surname,
-                City = request.City,
-                CompadnyDescription=request.CompadnyDescription,
-                Phone = request.Phone,
-                Email = request.Email,
-                PasswordHash = passwordHash,
-                PasswordSalt = passwordSalt,
-                Adress=request.Adress
-               /* VerificationToken = CreateRandomToken()*/
-            };
+                CreatePasswordHash(request.password, out byte[] passwordHash, out byte[] passwordSalt);
+                var empoler = new Empolyer
+                {
+                    Name = request.Name,
+                    CompanyName = request.CompanyName,
+                    Surname = request.Surname,
+                    City = request.City,
+                    CompadnyDescription = request.CompadnyDescription,
+                    Phone = request.Phone,
+                    Email = request.Email,
+                    PasswordHash = passwordHash,
+                    PasswordSalt = passwordSalt,
+                    Adress = request.Adress
+                    /* VerificationToken = CreateRandomToken()*/
+                };
 
-            _context.Empolyers.Add(empoler);
-            _context.SaveChangesAsync();
-            return RedirectToAction("Index", "Account");
+                _context.Empolyers.Add(empoler);
+                _context.SaveChangesAsync();
+                return RedirectToAction("Index", "Account");
+            }
+            else
+            {
+                return View("../Account/registerEmployer");
+            }
         }
     }
 
